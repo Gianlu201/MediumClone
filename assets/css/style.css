@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  color: #191919;
+}
+
+header,
+#hero {
+  background-color: #ffc017;
+  border-bottom: 1px solid #191919;
+}
+
+/*-- HEADER -----------------------------------------------*/
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  text-decoration: none;
+  color: #191919;
+}
+
+nav ul li.current,
+#hero button {
+  padding: 10px 15px;
+  background-color: #191919;
+  border-radius: 100px;
+}
+
+nav ul li.current a {
+  color: white;
+}
+
+/*-- MAIN -------------------------------------------------*/
+
+/*---- SECTION#HERO -----------------------------*/
+
+#hero {
+  margin-bottom: 30px;
+}
+
+#hero .container {
+  display: flex;
+  align-items: center;
+}
+
+#hero h1 {
+  font-family: "Spectral", serif;
+  font-size: 6em;
+  font-weight: 500;
+}
+
+#hero h2 {
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+#hero button {
+  color: white;
+  padding: 7px 45px;
+  font-size: 1.2em;
+}
+
+#hero #svgM {
+  height: 500px;
+  position: relative;
+  left: 200px;
+  
+}
+
+/*---- SECTION#TRENDING -------------------------*/
+
+#trending h2 {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+
+#trending h2::before {
+  content: url('/assets/imgs/svg/trending.svg');
+  height: 100%;
+  position: relative;
+  top: 8px;
+}
+
+#trending .trendsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.trendsContainer .trend {
+  width: 32%;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.trend > span {
+  display: inline-block;
+  width: 60px;
+  color: #E6E7E6;
+  font-weight: 800;
+  font-size: 1.8em;
+}
+
+.trend .trendContents {
+  width: 80%;
+  padding-top: 5px;
+}
+
+.trendContents .author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trendContents .author img {
+  border-radius: 50%;
+  width: 25px;
+}
+
+.trendContents .author h5 {
+  font-size: 0.8em;
+}
+
+.author span.gray {
+  color: gray;
+}
+
+.trendContents h4 {
+  font-size: 1em;
+  font-weight: 800;
+  margin: 10px 0;;
+}
+
+.trendContents .pubData {
+  display: flex;
+  gap: 5px;
+}
+
+.trendContents .pubData span {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: gray;
+  display: inline-block;
+}
+
+.trendContents .pubData span.star {
+  position: relative;
+  bottom: 2px;
+}
+
+/*---- NEWS -------------------------------------*/
