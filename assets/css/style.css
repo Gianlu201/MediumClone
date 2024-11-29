@@ -17,8 +17,16 @@ header,
   border-bottom: 1px solid #191919;
 }
 
+header.white {
+  background-color: white;
+}
+
 body {
   overflow-x: hidden;
+}
+
+nav ul li {
+  list-style-type: none;
 }
 
 /*-- HEADER -----------------------------------------------*/
@@ -27,6 +35,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: background-color 1.5s;
 }
 
 header .container {
@@ -42,24 +51,40 @@ nav ul {
   align-items: center;
 }
 
-nav ul li {
-  list-style-type: none;
-}
-
 nav ul li a:link,
 nav ul li a:visited {
   text-decoration: none;
   color: #191919;
 }
 
-nav ul li.current,
+header nav ul li a:hover {
+  font-weight: 600;
+}
+
+header nav ul li {
+  transition: transform 0.5s;
+}
+
+header nav ul li:hover {
+  transform: scale(1.1, 1.1);
+}
+
+nav ul li.start,
 #hero button {
   padding: 10px 15px;
   background-color: #191919;
   border-radius: 100px;
 }
 
-nav ul li.current a {
+nav ul li.start {
+  transition: background-color 1.5s;
+}
+
+nav ul li.start.green {
+  background-color: #1a8917;
+}
+
+nav ul li.start a {
   color: white;
 }
 
@@ -120,10 +145,11 @@ aside span.gray,
   font-weight: 400;
 }
 
-#hero button {
+#hero button#startReading {
   color: white;
   padding: 7px 45px;
   font-size: 1.2em;
+  cursor: pointer;
 }
 
 #hero #svgM {
@@ -189,17 +215,17 @@ aside span.gray,
 /*---- NEWSAREA ---------------------------------*/
 
 div.newsArea {
-  margin-top: 30px;
+  margin-top: 70px;
   display: flex;
-  gap: 100px;
+  gap: 70px;
 }
 
 #newsContainer {
-  width: 55%;
+  width: 68%;
 }
 
 .newsArea aside {
-  width: 45%;
+  width: 35%;
   position: sticky;
   top: 80px;
   height: fit-content;
@@ -208,7 +234,7 @@ div.newsArea {
 /*------ NEWS-SECTION ---------------------------*/
 .news {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 40px;
 }
 
@@ -223,7 +249,7 @@ div.newsArea {
 }
 
 .news .newsContent p {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .newsContent .pubData {
@@ -243,17 +269,48 @@ div.newsArea {
 }
 
 .news .newsImage {
-  width: 33%;
+  width: 32%;
 }
 
 .news .newsImage img {
   width: 100%;
 }
 
-/*------ NEWS-SECTION ---------------------------*/
+/*------ ASIDE ----------------------------------*/
+
+.newsArea aside h2 {
+  font-size: 1em;
+  margin: 10px 0 1em;
+}
+
+.newsArea aside .topicsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap: 10px;
+  margin-bottom: 2em;
+}
 
 .newsArea aside .topicsContainer span {
-  display: inline-block;
-  padding: 5px 10px;
+  padding: 7px 15px;
   border: 1px solid lightgray;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+aside nav {
+  margin-top: 20px;
+}
+
+aside nav ul {
+  flex-wrap: wrap;
+  align-content: self-start;
+  gap: 10px;
+}
+
+aside nav ul li a:link,
+aside nav ul li a:visited {
+  color: gray;
+  font-size: 0.9em;
+  padding: 2px 5px;
 }
