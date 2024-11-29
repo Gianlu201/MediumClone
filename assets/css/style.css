@@ -7,6 +7,7 @@
 
 .container {
   width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   color: #191919;
 }
@@ -27,6 +28,12 @@ body {
 
 nav ul li {
   list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+.container {
+  width: 93%;
+}
 }
 
 /*-- HEADER -----------------------------------------------*/
@@ -55,14 +62,15 @@ nav ul li a:link,
 nav ul li a:visited {
   text-decoration: none;
   color: #191919;
+  font-weight: 500;
 }
 
 header nav ul li a:hover {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 header nav ul li {
-  transition: transform 0.5s;
+  transition: transform 0.15s;
 }
 
 header nav ul li:hover {
@@ -103,6 +111,7 @@ nav ul li.start a {
 
 .author h5 {
   font-size: 0.8em;
+  font-weight: 700;
 }
 
 .author span.gray,
@@ -127,11 +136,21 @@ aside span.gray,
 
 #hero {
   margin-bottom: 30px;
+  height: 400px;
+  position: relative;
 }
 
 #hero .container {
+  height: 100%;
   display: flex;
   align-items: center;
+}
+
+#hero .container div:first-of-type {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #hero h1 {
@@ -147,16 +166,28 @@ aside span.gray,
 
 #hero button#startReading {
   color: white;
+  width: fit-content;
   padding: 7px 45px;
   font-size: 1.2em;
   cursor: pointer;
 }
 
 #hero #svgM {
-  height: 500px;
-  position: relative;
-  left: 200px;
-  
+  height: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #hero h1 {
+  font-size: 5em;
+}
+
+#hero #svgM {
+  right: -180px;
+
+}
 }
 
 /*---- SECTION#TRENDING -------------------------*/
@@ -212,6 +243,25 @@ aside span.gray,
   bottom: 2px;
 }
 
+@media screen and (max-width: 768px) {
+  .trendsContainer .trend {
+    width: 48%;
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .trend .pubData {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .trend span.star {
+    display: none;
+  }
+}
+
+
+
 /*---- NEWSAREA ---------------------------------*/
 
 div.newsArea {
@@ -229,6 +279,26 @@ div.newsArea {
   position: sticky;
   top: 80px;
   height: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  div.newsArea {
+  margin-top: 40px;
+
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .newsArea aside {
+    order: 1;
+    width: 90%;
+    position: inherit;
+  }
+
+  #newsContainer {
+    order: 2;
+    width: 100%;
+  }
 }
 
 /*------ NEWS-SECTION ---------------------------*/
@@ -276,6 +346,12 @@ div.newsArea {
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  #newsContainer {
+    
+  }
+}
+
 /*------ ASIDE ----------------------------------*/
 
 .newsArea aside h2 {
@@ -300,6 +376,8 @@ div.newsArea {
 
 aside nav {
   margin-top: 20px;
+  padding-top: 1em;
+  border-top: 1px solid lightgray;
 }
 
 aside nav ul {
@@ -313,4 +391,16 @@ aside nav ul li a:visited {
   color: gray;
   font-size: 0.9em;
   padding: 2px 5px;
+}
+
+@media screen and (max-width: 768px) {  
+  .newsArea aside h2 {
+    font-size: 0.9em;
+    font-weight: 800;
+  }
+
+  aside nav {
+    width: 110%;
+    /* display: none; */
+  }
 }
