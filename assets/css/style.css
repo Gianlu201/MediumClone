@@ -81,6 +81,7 @@ nav ul li.current a {
 }
 
 .author span.gray,
+aside span.gray,
 .news .newsContent p {
   color: gray;
 }
@@ -247,4 +248,12 @@ div.newsArea {
 
 .news .newsImage img {
   width: 100%;
+}
+
+/*------ NEWS-SECTION ---------------------------*/
+
+.newsArea aside .topicsContainer span {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid lightgray;
 }
