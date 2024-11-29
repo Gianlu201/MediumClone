@@ -14,11 +14,10 @@ document.addEventListener('scroll', function(event) {
   }
 })
 
-const ma = m.length;
 
 function sfarfallio() {
   for (let i = 0; i<20; i++) {
-    let j = Math.floor(Math.random()*ma);
+    let j = Math.floor(Math.random()*m.length);
     let element = m[j].parentElement.parentElement.parentElement;
     if (element.getAttribute('opacity') == 1) {
       element.setAttribute('opacity', '0');

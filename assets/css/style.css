@@ -31,9 +31,13 @@ nav ul li {
 }
 
 @media screen and (max-width: 768px) {
-.container {
-  width: 93%;
+  .container {
+    width: 93%;
+  }
 }
+
+hr {
+  border-color: lightgray;
 }
 
 /*-- HEADER -----------------------------------------------*/
@@ -165,7 +169,7 @@ aside span.gray,
 }
 
 #hero h1 {
-  font-family: "Spectral", serif;
+  font-family: 'Spectral', serif;
   font-size: 6em;
   font-weight: 500;
 }
@@ -192,13 +196,12 @@ aside span.gray,
 
 @media screen and (max-width: 768px) {
   #hero h1 {
-  font-size: 5em;
-}
+    font-size: 4em;
+  }
 
-#hero #svgM {
-  right: -180px;
-
-}
+  #hero #svgM {
+    right: -180px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -207,14 +210,12 @@ aside span.gray,
   }
 }
 
-
 /*---- SECTION#TRENDING -------------------------*/
 
 #trending h2 {
   font-size: 0.9em;
   margin-bottom: 15px;
 }
-
 
 #trending h2::before {
   content: url('/assets/imgs/svg/trending.svg');
@@ -240,7 +241,7 @@ aside span.gray,
 .trend > span {
   display: inline-block;
   width: 60px;
-  color: #E6E7E6;
+  color: #e6e7e6;
   font-weight: 800;
   font-size: 1.8em;
 }
@@ -280,10 +281,9 @@ aside span.gray,
 }
 
 @media screen and (max-width: 576px) {
-#trending h2 {
-  font-weight: 800;
+  #trending h2 {
+    font-weight: 800;
   }
-
 
   .trendsContainer .trend {
     width: 100%;
@@ -322,12 +322,12 @@ div.newsArea {
 
 @media screen and (max-width: 768px) {
   div.newsArea {
-  margin-top: 40px;
+    margin-top: 40px;
 
     flex-direction: column;
     gap: 30px;
   }
-  
+
   .newsArea aside {
     order: 1;
     width: 90%;
@@ -351,6 +351,12 @@ div.newsArea {
   display: flex;
   gap: 15px;
   margin-bottom: 40px;
+}
+
+div.save,
+span.star,
+span.topic {
+  cursor: pointer;
 }
 
 .news .newsContent {
@@ -381,7 +387,7 @@ div.newsArea {
 
 .newsContent .pubData span.topic {
   padding: 3px 6px;
-  background-color: #F2F3F3;
+  background-color: #f2f3f3;
   border-radius: 100px;
 }
 
@@ -399,21 +405,19 @@ div.newsArea {
 }
 
 @media screen and (max-width: 576px) {
-.news .newsContent {
-  width: 58%;
-}
+  .news .newsContent {
+    width: 58%;
+  }
 
-.news .newsImage {
-  width: 40%;
-}
+  .news .newsImage {
+    width: 40%;
+  }
 
-.news .pubData span {
-  font-size: 0.7em;
-  font-weight: 500;
+  .news .pubData span {
+    font-size: 0.7em;
+    font-weight: 500;
+  }
 }
-
-}
-
 
 /*------ ASIDE ----------------------------------*/
 
@@ -425,7 +429,7 @@ div.newsArea {
 .newsArea aside .topicsContainer {
   display: flex;
   flex-wrap: wrap;
-  
+
   gap: 10px;
   margin-bottom: 2em;
 }
@@ -456,7 +460,7 @@ aside nav ul li a:visited {
   padding: 2px 5px;
 }
 
-@media screen and (max-width: 768px) {  
+@media screen and (max-width: 768px) {
   .newsArea aside h2 {
     font-size: 0.9em;
     font-weight: 800;
