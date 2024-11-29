@@ -96,6 +96,17 @@ nav ul li.start a {
   color: white;
 }
 
+@media screen and (max-width: 576px) {
+  header nav li {
+    display: none;
+  }
+
+  header nav li#singIn,
+  header nav li.start {
+    display: inline-block;
+  }
+}
+
 /*-- MAIN -------------------------------------------------*/
 
 .author {
@@ -190,6 +201,13 @@ aside span.gray,
 }
 }
 
+@media screen and (max-width: 576px) {
+  #hero #svgM {
+    display: none;
+  }
+}
+
+
 /*---- SECTION#TRENDING -------------------------*/
 
 #trending h2 {
@@ -203,6 +221,7 @@ aside span.gray,
   height: 100%;
   position: relative;
   top: 8px;
+  margin-right: 5px;
 }
 
 #trending .trendsContainer {
@@ -260,7 +279,27 @@ aside span.gray,
   }
 }
 
+@media screen and (max-width: 576px) {
+#trending h2 {
+  font-weight: 800;
+  }
 
+
+  .trendsContainer .trend {
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .trend .author h5 {
+    font-weight: 800;
+    font-size: 0.85em;
+  }
+
+  .trendContents h4 {
+    font-weight: 800;
+  }
+}
 
 /*---- NEWSAREA ---------------------------------*/
 
@@ -301,6 +340,12 @@ div.newsArea {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .newsArea aside {
+    width: 100%;
+  }
+}
+
 /*------ NEWS-SECTION ---------------------------*/
 .news {
   display: flex;
@@ -320,6 +365,13 @@ div.newsArea {
 
 .news .newsContent p {
   font-size: 1em;
+  line-height: 1.2em;
+  max-height: 2.5em;
+  overflow: hidden;
+}
+
+.news .newsContent p::after {
+  content: '...';
 }
 
 .newsContent .pubData {
@@ -346,11 +398,22 @@ div.newsArea {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  #newsContainer {
-    
-  }
+@media screen and (max-width: 576px) {
+.news .newsContent {
+  width: 58%;
 }
+
+.news .newsImage {
+  width: 40%;
+}
+
+.news .pubData span {
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+}
+
 
 /*------ ASIDE ----------------------------------*/
 
@@ -401,6 +464,19 @@ aside nav ul li a:visited {
 
   aside nav {
     width: 110%;
-    /* display: none; */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .newsArea aside .topicsContainer span {
+    font-weight: 700;
+  }
+
+  aside nav {
+    width: 100%;
+  }
+
+  aside nav ul li {
+    margin-right: 10px;
   }
 }
